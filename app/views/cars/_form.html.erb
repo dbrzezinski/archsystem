@@ -1,0 +1,12 @@
+<%= simple_form_for @car, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :model %>
+  <%= f.input :mark %>
+  <%= f.input :yob %>
+  <%= f.input :counter %>
+  <%= f.association :salon %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                cars_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  model: MyString
+  yob: 2012-11-19
+  counter: 9.99
+
+two:
+  name: MyString
+  model: MyString
+  yob: 2012-11-19
+  counter: 9.99

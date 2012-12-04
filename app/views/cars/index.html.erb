@@ -1,0 +1,27 @@
+<h1>Cars</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Model</th>
+    <th>Mark</th>
+    <th>Year</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @cars.each do |car| %>
+    <tr>
+      <td><%= link_to car.model, car_path(car) %></td>
+      <td><%= car.mark %></td>
+      <td><%= car.yob %></td>
+      <td>
+        <%= link_to 'Edit', edit_car_path(car), :class => 'btn btn-mini' %>
+        <%= link_to 'Destroy', car_path(car), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_car_path,
+            :class => 'btn btn-primary' %>

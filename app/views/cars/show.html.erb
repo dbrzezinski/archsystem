@@ -1,0 +1,11 @@
+<h1>Car Info: </h1>
+
+
+<div>Salon: <%= @car.salon.name %></div>
+<div>Model:  <%= @car.model %> </div>
+<div>Marka: <%=@car.mark %> </div>
+<div>Rocznik: <%=@car.yob %> </div>
+<div>Przebieg: <%=@car.counter %>km </div>
+
+<%= link_to "Edit", edit_car_path, class: "btn btn-small" %>
+<%= link_to "Back", cars_path, class: "btn btn-small" %>
