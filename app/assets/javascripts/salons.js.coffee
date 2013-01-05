@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+jQuery ->
+  salons_datatable = $('#salons_datatable').dataTable
+    bJQueryUI: true
+    aoColumns: [
+      null
+      null
+      null
+      { "bSortable": false }
+    ]  
+  if $('#salons_datatable').length
+    salons_datatable.fnSort([[1,'desc']])

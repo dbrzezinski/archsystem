@@ -26,11 +26,15 @@ class CarsController < ApplicationController
   # GET /cars/new
   # GET /cars/new.json
   def new
-    @car = Car.new
+    if Salon.all.count == 0
+      redirect_to new_salon_path
+    else
+      @car = Car.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @car }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @car }
+      end
     end
   end
 
